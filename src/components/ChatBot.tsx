@@ -12,7 +12,7 @@ const ChatBot = () => {
           src="https://AnishNehete-AskMyCV.hf.space"
           title="Anish Chatbot"
           width="80%"
-          height="800"
+          height="600"
           style={{ border: "1px solid #ccc", borderRadius: "10px" }}
           allow="clipboard-write"
         ></iframe>
