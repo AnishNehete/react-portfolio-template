@@ -1,70 +1,66 @@
 import React from "react";
-import mock01 from '../assets/images/mock01.png';
-import mock02 from '../assets/images/mock02.png';
-import mock03 from '../assets/images/mock03.png';
-import mock04 from '../assets/images/mock04.png';
-import mock05 from '../assets/images/mock05.png';
-import mock06 from '../assets/images/mock06.png';
-import mock07 from '../assets/images/mock07.png';
-import mock08 from '../assets/images/mock08.png';
-import mock09 from '../assets/images/mock09.png';
-import mock10 from '../assets/images/mock10.png';
+import ChatDB from '../assets/images/ChatDB.jpeg';
+import BirdDetectionFinal from '../assets/images/Bird DetectionFinal.jpg';
+import ExoplanetDetection from '../assets/images/Exoplanetdetection.jpeg';
+import ReinforcementLearning from '../assets/images/Reinforcementgaming.png';
+import DataPipeline from '../assets/images/DataPipeline.jpeg';
+
 import '../assets/styles/Project.scss';
+
+
+
 
 function Project() {
     return(
     <div className="projects-container" id="projects">
-        <h1>Personal Projects</h1>
+        <h1>Projects</h1>
         <div className="projects-grid">
             <div className="project">
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><img src={mock10} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.filmate.club/" target="_blank" rel="noreferrer"><h2>Filmate AI</h2></a>
-                <p>Developed movie finder app with semantic search and sentiment analysis using OpenAI GPT-3.5 Turbo, Qdrant, React, and Flask.</p>
+                <a href="https://github.com/bhosaleshivam/ChatDB50" target="_blank" rel="noreferrer"><img src={ChatDB} className="zoom" alt="ChatDB - Natural Language Interface" width="100%"/></a>
+                <a href="https://github.com/bhosaleshivam/ChatDB50" target="_blank" rel="noreferrer"><h2>ChatDB - Natural Language Interface for SQL & NoSQL Databases</h2></a>
+                <p>
+                  • Engineered a Flask backend to interface with the Gemini LLM API, incorporating prompt engineering and implementing local cache layers to reduce latency and convert natural language input into accurate, executable queries.<br/>
+                  • Implemented frontend interface using React to display results in a readable, structured table format.<br/>
+                  • Integrated query routing logic to intelligently switch between MySQL and MongoDB based on user intent and database context.
+                </p>
             </div>
             <div className="project">
-                <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><img src={mock09} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://yujisatojr.itch.io/highspeedchase" target="_blank" rel="noreferrer"><h2>High Speed Chase</h2></a>
-                <p>Designed, developed, and launched a 3D multiplayer racing game with C# and Unity. This is available on Itch.io for gamers worldwide to enjoy.</p>
+                <a href="https://ieeexplore.ieee.org/document/10837870" target="_blank" rel="noreferrer"><img src={BirdDetectionFinal} className="zoom" alt="Bird Species Identification" width="100%"/></a>
+                <a href="https://ieeexplore.ieee.org/document/10837870" target="_blank" rel="noreferrer"><h2>Bird Species Identification using Object Detection Techniques</h2></a>
+                <p>
+                  • Achieved a mAP score of 0.629 on YOLOv5 and 0.457 on YOLOv8 respectively on 28 classes.<br/>
+                  • Conducted rigorous evaluation of YOLO models on live videos, assessing their ability to accurately identify and track bird species over time.<br/>
+                  • Implemented advanced computer vision techniques using YOLO, OpenCV, and Git for version control in Google Colab environment.<br/>
+                  • Published research findings in IEEE ASIACON 2024 conference proceedings.
+                </p>
             </div>
             <div className="project">
-                <a href="https://yujisatojr.itch.io/spacecraft" target="_blank" rel="noreferrer"><img src={mock08} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://yujisatojr.itch.io/spacecraft" target="_blank" rel="noreferrer"><h2>Astro Raiders</h2></a>
-                <p>Developed and released a 2D shooting game with C# and Unity. This project is hosted on the Itch.io public marketplace.</p>
+                <a href="https://link.springer.com/book/9789819623280" target="_blank" rel="noreferrer"><img src={ExoplanetDetection} className="zoom" alt="Exoplanet Detection" width="100%"/></a>
+                <a href="https://link.springer.com/book/9789819623280" target="_blank" rel="noreferrer"><h2>Exoplanet Detection and Habitability Analysis</h2></a>
+                <p>
+                  • Trained an Artificial Neural Network to detect troughs in astronomical flux data, achieving an accuracy of 89%.<br/>
+                  • Implemented various classical machine learning models including XGBoost, SVM, and KNN for determining habitability of exoplanets.<br/>
+                  • Leveraged Python ecosystem with Scikit-learn, Keras, NumPy, and Seaborn for comprehensive data analysis and visualization.<br/>
+                  • Contributed to published research in ICDAI-2024 conference proceedings.
+                </p>
             </div>
             <div className="project">
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><img src={mock07} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.datumlearn.com/" target="_blank" rel="noreferrer"><h2>Datum: Integrated Learning Platform</h2></a>
-                <p>This is an online educational platform that provides high-quality, data science-focused learning resources in the Japanese language. I created the entire platform from scratch using Ruby on Rails.</p>
+                <a href="https://ieeexplore.ieee.org/document/10692314" target="_blank" rel="noreferrer"><img src={ReinforcementLearning} className="zoom" alt="Reinforcement Learning Kart-Racing" width="100%"/></a>
+                <a href="https://ieeexplore.ieee.org/document/10692314" target="_blank" rel="noreferrer"><h2>Reinforcement Learning in Kart-Racing Gaming</h2></a>
+                <p>
+                  • Developed a Non-Player Character (NPC) agent leveraging reinforcement learning for navigating and optimizing performance in a complex kart-racing environment.<br/>
+                  • Implemented SOTA algorithms: PPO and SAC on NPCs proved far more efficient than traditional AI techniques.<br/>
+                  • Published research on Unity ML-Agents and reinforcement learning applications in gaming at IEEE WCONF 2024.
+                </p>
             </div>
             <div className="project">
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><img src={mock06} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="http://www.wemanage.jp/" target="_blank" rel="noreferrer"><h2>WeManage: Real Estate Asset Management</h2></a>
-                <p>This mobile application allows realtors in Japan to securely manage their property information and view future income predictions. This app is built with Ruby on Rails and JavaScript.</p>
-            </div>
-            <div className="project">
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><img src={mock05} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://www.byuh.edu/covid-19-case-management" target="_blank" rel="noreferrer"><h2>COVID-19 Case Management</h2></a>
-                <p>Built official charts for COVID/vaccination tracking for an educational institution using JavaScript and the Google Sheets API v4. The dashboard served the university's leadership in their decision-making processes.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><img src={mock04} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/multi-reg-analysis" target="_blank" rel="noreferrer"><h2>Multiple Regression Property Analysis</h2></a>
-                <p>Analyzed the real estate market in Japan and predicted property prices by implementing statistical methods such as OLS and multi-regression analysis. This project leveraged Python and various libraries such as Pandas, NumPy, Matplotlib, and Scikit-Learn.</p>
-            </div>
-            <div className="project">
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><img src={mock03} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://holokai.byuh.edu/programs-of-study" target="_blank" rel="noreferrer"><h2>Programs of Study</h2></a>
-                <p>Designed and developed a custom component for a CMS-based platform (e.g., 'Brightspot') using Java, Handlebars, and LESS. University students can find their majors of interest through this module.</p>
-            </div>
-            <div className="project">
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><img src={mock02} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://hookele.byuh.edu/transfer-evaluation-guidelines-and-matrix" target="_blank" rel="noreferrer"><h2>Transfer Evaluation Matrix</h2></a>
-                <p>Created an interactive CSV table generator with Java, Handlebars, and LESS. This project helps transfer students to quickly identify eligible credits.</p>
-            </div>
-            <div className="project">
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><img src={mock01} className="zoom" alt="thumbnail" width="100%"/></a>
-                <a href="https://github.com/yujisatojr/submeowrine" target="_blank" rel="noreferrer"><h2>Submeowrine</h2></a>
-                <p>Developed and released an Android mobile application using Java and Android Studio that runs a 2D shooting game.</p>
+                <img src={DataPipeline} className="zoom" alt="End to End Spotify Data Pipelining" width="100%"/>
+                <h2>End to End Spotify Data Pipelining</h2>
+                <p>
+                  • Built an ETL pipeline using CloudWatch for trigger, AWS Lambda to extract and transform Spotify data into S3 using public API.<br/>
+                  • Automated data loading into Snowflake via SnowPipe, enabling scalable storage and real-time ingestion of structured metrics.<br/>
+                  • Connected Power BI to Snowflake to generate live dashboards visualizing trends in tracks, artists, and user engagement behavior.
+                </p>
             </div>
         </div>
     </div>

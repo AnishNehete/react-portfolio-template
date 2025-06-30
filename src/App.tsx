@@ -1,10 +1,13 @@
 import React, {useState, useEffect} from "react";
+import ChatBot from './components/ChatBot';
 import {
   Main,
   Timeline,
   Expertise,
   Project,
+  
   Contact,
+
   Navigation,
   Footer,
 } from "./components";
@@ -31,10 +34,12 @@ function App() {
         <Navigation parentToChild={{mode}} modeChange={handleModeChange}/>
         <FadeIn transitionDuration={700}>
             <Main/>
+            <ChatBot/>
             <Expertise/>
             <Timeline/>
             <Project/>
             <Contact/>
+           
         </FadeIn>
         <Footer />
     </div>

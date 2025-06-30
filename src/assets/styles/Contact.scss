@@ -4,6 +4,11 @@
   margin-right: 5px;
 }
 
+.contact-form,
+.contact-form * {
+  pointer-events: auto !important;
+}
+
 .contact-form {
   padding-top: 20px;
 
@@ -20,6 +25,48 @@
 
   fieldset {
     background-color: white;
+  }
+
+  // Ensure Material-UI TextField components work properly
+  .MuiTextField-root {
+    width: 100%;
+    
+    .MuiInputBase-root {
+      background-color: white;
+      color: #333;
+      
+      input {
+        color: #333 !important;
+        background-color: white;
+      }
+      
+      textarea {
+        color: #333 !important;
+        background-color: white;
+      }
+    }
+    
+    .MuiInputLabel-root {
+      color: #666;
+      
+      &.Mui-focused {
+        color: #5000ca;
+      }
+    }
+    
+    .MuiOutlinedInput-root {
+      .MuiOutlinedInput-notchedOutline {
+        border-color: #ccc;
+      }
+      
+      &:hover .MuiOutlinedInput-notchedOutline {
+        border-color: #5000ca;
+      }
+      
+      &.Mui-focused .MuiOutlinedInput-notchedOutline {
+        border-color: #5000ca;
+      }
+    }
   }
 }
 

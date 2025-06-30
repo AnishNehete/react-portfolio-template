@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react';
 import '../assets/styles/Contact.scss';
-// import emailjs from '@emailjs/browser';
+import emailjs from '@emailjs/browser';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
@@ -20,34 +20,37 @@ function Contact() {
 
   const sendEmail = (e: any) => {
     e.preventDefault();
-
+  
     setNameError(name === '');
     setEmailError(email === '');
     setMessageError(message === '');
-
-    /* Uncomment below if you want to enable the emailJS */
-
-    // if (name !== '' && email !== '' && message !== '') {
-    //   var templateParams = {
-    //     name: name,
-    //     email: email,
-    //     message: message
-    //   };
-
-    //   console.log(templateParams);
-    //   emailjs.send('service_id', 'template_id', templateParams, 'api_key').then(
-    //     (response) => {
-    //       console.log('SUCCESS!', response.status, response.text);
-    //     },
-    //     (error) => {
-    //       console.log('FAILED...', error);
-    //     },
-    //   );
-    //   setName('');
-    //   setEmail('');
-    //   setMessage('');
-    // }
+  
+    if (name !== '' && email !== '' && message !== '') {
+      const currentTime = new Date().toLocaleString(); // or format as needed
+  
+      const templateParams = {
+        name: name,
+        time: currentTime,
+        message: message
+      };
+  
+      emailjs.send('service_51qndns', 'template_2c5z0pp', templateParams, 'WHajf3smtZZ-WjyRW').then(
+        (response) => {
+          console.log('SUCCESS!', response.status, response.text);
+          alert('Message sent successfully!');
+        },
+        (error) => {
+          console.log('FAILED...', error);
+          alert('Failed to send message.');
+        }
+      );
+  
+      setName('');
+      setEmail('');
+      setMessage('');
+    }
   };
+  
 
   return (
     <div id="contact">
@@ -65,32 +68,38 @@ function Contact() {
             <div className='form-flex'>
               <TextField
                 required
-                id="outlined-required"
+                id="name-field"
                 label="Your Name"
                 placeholder="What's your name?"
                 value={name}
                 onChange={(e) => {
+                  console.log('Name changed:', e.target.value);
                   setName(e.target.value);
                 }}
                 error={nameError}
                 helperText={nameError ? "Please enter your name" : ""}
+                variant="outlined"
+                fullWidth
               />
               <TextField
                 required
-                id="outlined-required"
+                id="email-field"
                 label="Email / Phone"
                 placeholder="How can I reach you?"
                 value={email}
                 onChange={(e) => {
+                  console.log('Email changed:', e.target.value);
                   setEmail(e.target.value);
                 }}
                 error={emailError}
                 helperText={emailError ? "Please enter your email or phone number" : ""}
+                variant="outlined"
+                fullWidth
               />
             </div>
             <TextField
               required
-              id="outlined-multiline-static"
+              id="message-field"
               label="Message"
               placeholder="Send me any inquiries or questions"
               multiline
@@ -98,10 +107,13 @@ function Contact() {
               className="body-form"
               value={message}
               onChange={(e) => {
+                console.log('Message changed:', e.target.value);
                 setMessage(e.target.value);
               }}
               error={messageError}
               helperText={messageError ? "Please enter the message" : ""}
+              variant="outlined"
+              fullWidth
             />
             <Button variant="contained" endIcon={<SendIcon />} onClick={sendEmail}>
               Send
